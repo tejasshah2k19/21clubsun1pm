@@ -1,0 +1,38 @@
+HTML 
+
+    hyper text markup language
+    tag based 
+
+    tags 
+
+
+why?
+    website --> collection of webpages 
+            singe web page -- html 
+            static 
+    static website 
+
+tools? 
+    text editor 
+    browser 
+
+.c
+
+.html
+.htm 
+ 
+we have two category in tag 
+
+1) container tag  <html></html>
+2) empty tag     <br> 
+
+case insensitive 
+
+
+
+
+
+
+
+
+
