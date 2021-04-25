@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+
+    <style type="text/css">
+    
+    /*
+        tag selector h2 , h3  - auto apply 
+    */
+    h2{
+        color:red;
+        background-color: wheat;
+        font-size: 200%;
+    } 
+
+    body{
+          width: 50%;  
+    }
+
+
+    /* class selector -- you need to apply */ 
+    .fontyellow{
+        color: yellow;
+        background-color: rosybrown;
+    }
+
+
+    .fontred{
+        color: red;
+    }
+
+    .bgblue{
+       background-color: blue;
+    }
+
+
+    /* id selector -- you need to apply */
+    #fontteal{
+        color: teal;
+    }
+
+
+    /* universal selector -- auto -to all  */
+    *{
+        font-size: 150%;   
+         /* width: 50%;  */
+        color: violet;
+    }
+    </style>
+</head>
+<body>
+
+    <h2>
+        Welcome
+    </h2>
+    
+    <h2>
+        Signup
+    </h2>
+
+    <h2 class="fontyellow">
+        Signup
+    </h2>
+
+    <h3 class="fontred bgblue">
+        ForgetPassword
+    </h3>
+
+
+    <div id="fontteal" class="bgblue">
+            this is div , this div uses fontyellow
+    </div>
+
+
+    <div id="fontteal">
+        this is div , this div uses <span class="bgblue">fontyellow</span>
+    </div>
+
+
+    <span class="bgblue">this is span</span>
+
+
+
+
+
+</body>
+</html>

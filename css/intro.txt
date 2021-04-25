@@ -1,0 +1,39 @@
+CSS :- Cascading Style Sheet 
+
+how your html elements/tags  are  display 
+design / layout 
+
+
+1) internal css
+        inside html page 
+        <head>
+            <style>
+            </style>
+        </head> 
+2) external css 
+        new file -> css -> link html page 
+3) inline css 
+        tag -> inside tag
+        
+
+
+There are four types of selectors in css: 
+
+1)tag 
+
+2)class 
+
+3)id  
+
+4)universal( * )
+
+
+
+id --> unique -->single 
+
+below line is used to inform browser/devise to support responsive design 
+means it will automatically fits page content without overlapp/overflow  each other 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+
