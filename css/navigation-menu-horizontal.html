@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .horizontalul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: darkslategrey; 
+            overflow: hidden;
+        }
+
+       .horizontalul li{
+            float: left;
+        }
+       .horizontalul li a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 20px 20px;
+        }
+
+        .horizontalul li a:hover{
+
+          background-color:blanchedalmond;
+          color: brown;
+      }  
+
+      body{
+          margin: 0;
+      }
+
+      .verticalmenu{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 10%;
+            height: 100%;
+            position: fixed;
+            overflow: auto; 
+            background-color: bisque;
+      }
+ 
+      .verticalmenu li a{
+            text-decoration: none;
+            padding: 15px 20px;
+            display: block; 
+            color: black;
+      }
+      .verticalmenu li a:hover{
+        color: brown;
+        background-color: aliceblue;
+
+      }
+      .content{
+            margin-left: 15%;
+            margin-top: 2%;
+            margin-right: 5%;
+            border: 1px solid bisque;
+            background-color: bisque;
+            border-radius: 10px;
+            padding: 10px 10px 10px 20px;
+      }
+      
+      @media only screen and  ( max-width: 500px ){
+          body{
+              background-color: red;
+          }
+          .verticalmenu{
+              display: none;
+          }
+          
+          .horizontalul li{
+            float: none;
+          }
+      }
+          
+      
+    </style>
+
+</head>
+<body>
+
+<ul class="horizontalul">
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Home.html">AboutUs</a></li>
+    <li><a href="Home.html">Contactus</a></li>
+    <li><a href="Home.html">Faq</a></li>
+    <li><a href="Home.html">Signup</a></li>
+
+</ul>    
+ 
+
+<ul class="verticalmenu" >
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="Home.html">AboutUs</a></li>
+    <li><a href="Home.html">Contactus</a></li>
+    <li><a href="Home.html">Faq</a></li>
+    <li><a href="Home.html">Signup</a></li>
+    
+</ul>    
+<div class="content">
+    this is the div after header and side bar 
+    <bR>
+        In header we have horizontal aligned menu<br>
+        In Side bar we used vertical menu
+        <br>
+        Thank you....
+
+
+</div>
+
+
+</body>
+</html>
