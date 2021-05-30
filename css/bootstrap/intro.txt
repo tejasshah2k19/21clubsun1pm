@@ -1,0 +1,30 @@
+css ->
+    1)responsive
+        flex
+        mediaquery 
+    2) properties 
+            key:value
+            color:red 
+    3) selector [ class,tag,id ]        
+
+Bootstrap :- 
+        lib , external css
+                class  
+  
+install:-
+    1) download Bootstrap css file and use as external css 
+    2) use CDN -  
+
+--------------------
+container : fixed width 
+container-fluid:- full width 
+
+---------------------------------
+text 
+
+
+
+
+
+
+
