@@ -1,0 +1,106 @@
+html --> 
+css --> bootstrap -->
+static no interaction 
+
+
+js --> dynamic , intertactive 
+js can be executed inside browser only.--> frontend 
+2009 --> Node.js --> js --> computer -->backend  
+
+
+ECMA -> specification 
+
+ES1
+ES2
+
+ES6*   *ES2015 
+        ES2016
+        ES2017
+        ES2018
+
+-------------------------------
+
+js-->code ===> run /execute ??? 
+
+browser ==> js engine 
+
+ME ===> chakra 
+Chrome ===> V8 
+FF  ===> spider monkey 
+
+-------------------------------
+<head>
+    <style>
+        bootstrap
+    </style>
+    <script>
+
+    </script>    
+</head>
+<body>
+
+    input class="form-control" 
+
+
+<script>
+
+</script> 
+
+</body>
+-------------------------------
+two way to implement js 
+
+1) internal js  [ .html -> js ]
+2) external js  [ .html | .js ]
+
+----------------------------------
+
+
+var name = "admin"
+
+variable ->  data name which can hold value 
+
+a =10
+b= 20
+c = a+b 
+alert(c)
+
+    Rules:
+            1) a-z A-z 0-9 special symbol ( underscore  dollarsign ) 
+            2) it must not start with digit 0-9 
+            3) it's case sensitive 
+            4) you can not use keywords (reserev words) 
+                    var if for         
+-----------------------------
+number 
+null
+string 
+boolean
+undefined 
+
+
+array
+object 
+----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
