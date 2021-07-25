@@ -83,6 +83,85 @@ array
 object 
 ----------------------------
 
+HTML DOM
+
+Document Object Model
+
+
+browser create --> dom 
+
+
+            tree [ all the html elements ]
+
+
+            document
+
+            html 
+
+   head                       body
+
+meta,meta,meta               form:calc
+ | title                    input:n1 , input:n2, intput, 
+
+document.calc
+
+1) we can change all the html element 
+2)) read input data 
+3) modify values and inputs 
+4) remove any html element 
+5) add any html element 
+..........................
+
+1) Core DOM
+2) XML DOM
+3) HTML DOM
+
+json
+XML  
+
+<users>
+    <user>
+        <firstName>Tejas</firstName>
+
+    </user>
+
+    <user>
+        <firstName>Ram</firstName>
+    </user>
+
+</users>
+
+-----------------------------------------------------------------------
+mainly we have two properties 
+    1) methods 
+    2) properties /events 
+
+
+    let x = document.getElementById("pAns")
+
+    x.innerHTML = 12  --> data + space + tag 
+    x.innerText = 12  --> data 
+    x.textContent = 12 --> data + space  
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

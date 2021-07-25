@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form name="calc">
+    <form name="calc" id="f123">
         No.1 : <input type="text" name="n1" /><br>
         No.2 : <input type="text" name="n2" /><Br>
 
@@ -19,7 +19,9 @@
         Div <input type="radio" name="opr" value="div"><br>
         <br>
         <input type="button" value="Submit" onclick="addition()" />
-
+            <p id="pAns">
+                <b>Royal     education     ahmedabad</b>       
+            </p>
     </form>
 
     <script>
@@ -49,8 +51,9 @@
             }
 
             console.log(ans);
-            alert(ans);
-
+            //alert(ans);
+            let x = document.getElementById("pAns")
+            x.innerHTML = ans
         }
 
     </script>
