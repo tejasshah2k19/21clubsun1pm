@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form name="arr">
+            Number: <input type="text" name="num"/><br>
+            <button type="button" onclick="addNumber()">Add</button>
+            <button type="button" onclick="searchArray()">Search</button>
+            <button type="button" onclick="deleteArray()">Delete</button>
+        
+            <br><br>
+            <p id="p"></p>   
+        </form>
+
+</body>
+<script>
+    var data = [] 
+
+    function addNumber(){
+        let num = document.arr.num.value ;
+        data.push(num); //add num into an array [ data ]
+        document.arr.num.value = ""; 
+        printArray()       
+    }
+
+    function printArray(){
+        document.getElementById("p").innerHTML = data; 
+    }
+
+    function searchArray(){
+        let found = 0 
+        let num = document.arr.num.value; 
+        for(let i=0;i<data.length;i++){
+            if(data[i] == num){
+                found= 1; 
+                break;
+            }
+        } 
+        if(found==1){
+            alert(num+" found");
+        }else{
+            alert(num+" Not Found");
+        }
+    }
+
+    function deleteArray(){
+        let num = document.arr.num.value
+        let index = data.indexOf(num)
+        document.arr.num.value=""
+        if(index == -1){
+            alert("Invalid Number")
+        }else{
+            data.splice(index,1)
+            printArray()
+        }
+
+    }
+</script>
+</html>
