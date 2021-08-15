@@ -16,7 +16,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" id="signupForm">
                 <h2>Signup</h2>
                 <form name="reg">
                     <div class="form-group">
@@ -42,12 +42,43 @@
                     </div>
 
                 </form>
+
+                <u style="cursor: pointer;" onclick="loadLogin()"> Login</u>
             </div>
+
+            <div class="col-md-6" id="loginForm" style="display: none;">
+
+                <h2>Login</h2>
+                <form name="reg">
+ 
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" id="email" placeholder="Enter Email" class="form-control" />
+                        <span class="text-danger" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="text" name="password" placeholder="Enter Password" class="form-control" />
+                        <span class="text-danger" id="passwordError"></span>
+                    </div>
+
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="authenticate()">Login</button>
+                    </div>
+
+                </form>
+                <u style="cursor: pointer;" onclick="loadSignup()">Signup</u>
+            
+            </div>
+
         </div>
 
     </div>
 
     <script>
+ 
+        var users = []
         function validate() {
             let firstName = document.reg.firstName.value;
             let email = document.reg.email.value;
@@ -103,8 +134,29 @@
 
             if (isError == false) {
                 //save data 
+                let user = { 
+                    "firstName":firstName,
+                    "email":email,
+                    "password":password
+                }
+                users.push(user)
             }
         }
+    
+        function loadLogin(){
+            document.getElementById("signupForm").style.display  = "none" 
+            document.getElementById("loginForm").style.display = "block"
+        }
+        function loadSignup(){
+            document.getElementById("signupForm").style.display  = "block" 
+            document.getElementById("loginForm").style.display = "none"
+        }
+     
+     
+        function authenticate(){
+
+        }
+
     </script>
 </body>
 
