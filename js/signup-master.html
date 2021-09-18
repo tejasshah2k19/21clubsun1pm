@@ -79,12 +79,42 @@
             </div>
 
         </div>
+        <!--row 1-->
+
+        <div class="row" style="display: none;" id="userslist">
+            <div class="col-md-6">
+                <h2>List Users</h2>
+                <table id="myusers" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>FirstName</td>
+                            <td>Email</td>
+                            <td>Password</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
     </div>
 
     <script>
 
         var users = []
+
+        let user1 = { firstName: "ram", email: "ram@gmail.com", password: "ram12345" }
+        let user2 = { firstName: "laxman", email: "laxman@gmail.com", password: "11111111" }
+        let user3 = { firstName: "sita", email: "sita@gmail.com", password: "12345678" }
+
+        users.push(user1);
+        users.push(user2);
+        users.push(user3);
+
         function validate() {
             let firstName = document.reg.firstName.value;
             let email = document.reg.email.value;
@@ -175,12 +205,31 @@
 
             if (isAuthenticate) {
                 toastr.success("Login done!!!!", "success", { timeOut: 2000 })
+                loadListUsers();
             } else {
-
                 toastr.error("Invalid Credentials!!!!", "Oops", { timeOut: 2000 })
             }
         }
+        function loadListUsers() {
+            document.getElementById("loginForm").style.display = "none"
+            document.getElementById("userslist").style.display = "block"
 
+            table = document.getElementById("myusers");
+            tbody = table.getElementsByTagName("tbody")[0];
+
+           for(i=0;i<users.length;i++){ 
+                row = tbody.insertRow(i);//1
+                c1 = row.insertCell(0);
+                c2 = row.insertCell(1);
+                c3 = row.insertCell(2);
+
+                c1.innerHTML = users[i].firstName;
+                c2.innerHTML = users[i].email;
+                c3.innerHTML = users[i].password;
+           }
+
+
+        }
     </script>
 </body>
 
