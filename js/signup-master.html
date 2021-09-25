@@ -90,6 +90,7 @@
                             <td>FirstName</td>
                             <td>Email</td>
                             <td>Password</td>
+                            <td>Action</td>
                         </tr>
                     </thead>
 
@@ -202,7 +203,6 @@
 
                 }
             }
-
             if (isAuthenticate) {
                 toastr.success("Login done!!!!", "success", { timeOut: 2000 })
                 loadListUsers();
@@ -222,13 +222,28 @@
                 c1 = row.insertCell(0);
                 c2 = row.insertCell(1);
                 c3 = row.insertCell(2);
+                c4 = row.insertCell(3); 
 
                 c1.innerHTML = users[i].firstName;
                 c2.innerHTML = users[i].email;
                 c3.innerHTML = users[i].password;
-           }
+                c4.innerHTML = "<button onclick='deleteRow("+i+")'> Delete </button>"
+            }
 
+        }
 
+        function deleteRow(i){ 
+            console.log("delete => ",i);
+            users.splice(i,1); //index , total record  
+            
+            table = document.getElementById("myusers");
+            tbody = table.getElementsByTagName("tbody")[0];
+            total = tbody.getElementsByTagName("tr").length; //3 
+            for(let i=0;i<total;i++){
+                tbody.deleteRow(0);
+            }
+
+            loadListUsers();
         }
     </script>
 </body>
