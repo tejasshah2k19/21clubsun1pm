@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events </title>
+</head>
+
+<body>
+
+    <form>
+        <!-- FirstName : <input type="text" name="firstName" id="firstName" onblur="firstNameValidate()" />
+        -->
+        FirstName : <input type="text" name="firstName" id="firstName" onblur="firstNameValidate()"
+            onkeyup="firstNameValidate()" />
+
+        <span id="firstNameError"></span>
+
+        <br>
+        Eamil : <input type="text" name="email" onblur="validateEmail()" id="email" />
+        <span id="emailError"></span><br>
+
+
+
+        <input type="button" value="Save" />
+    </form>
+
+    <br></br>
+
+    <img src="js.png" height="100px" id="myimg" width="100px"  onmouseover="large()" onmouseout="small()" />
+
+</body>
+
+<script>
+
+    function firstNameValidate() {
+        let onlyAlpha = /^[a-zA-Z]+$/
+
+        let firstName = document.getElementById("firstName").value
+        if (firstName == "" || firstName.trim().length == 0) {
+
+            document.getElementById("firstNameError").innerText = "Please Enter FirstName"
+        }
+        else if (onlyAlpha.test(firstName) == false) {
+            document.getElementById("firstNameError").innerText = "Please Enter Valid FirstName"
+
+        }
+        else {
+            document.getElementById("firstNameError").innerHTML = "";
+        }
+    }
+
+    function validateEmail() {
+        let email = document.getElementById("email").value
+        if (email == "" || email.trim().length == 0) {
+            document.getElementById("emailError").innerText = "Please Enter Email"
+        } else {
+            document.getElementById("emailError").innerHTML = "";
+        }
+    }
+
+    function large() {
+        let myImage = document.getElementById("myimg")
+        myImage.setAttribute("width", "500px");
+        myImage.setAttribute("height", "500px")
+        // myImage.style.width = "200px"
+    }
+
+    function small() {
+        let myImage = document.getElementById("myimg")
+        myImage.setAttribute("width", "100px");
+        myImage.setAttribute("height", "100px")
+    }
+</script>
+
+</html>
