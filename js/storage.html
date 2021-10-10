@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Name : <input type="text" name="firstName" /><Br>
+        <input type="button" value="Save" onclick="saveData()"/>
+        <br>
+        <input type="button" value="clear" onclick="clearData()"/>
+    </body>
+
+<script>
+    function saveData(){
+       let firstName =  document.getElementsByName("firstName")[0].value 
+        console.log(firstName);
+        localStorage.setItem("firstName",firstName)
+        sessionStorage.setItem("firstName",firstName)
+        document.cookie = "firstName="+firstName+"; expires=Oct 11 2023 00:00:00 UTC"
+    }
+    function clearData(){
+        localStorage.clear() //clear all 
+
+        // localStorage.removeItem("firstName") // this will only remove firstName from local storage 
+        sessionStorage.clear()
+    }
+</script>
+</html>

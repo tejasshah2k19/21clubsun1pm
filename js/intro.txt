@@ -150,6 +150,39 @@ Signup-master
 
 event --> 
 
+------------------------------------
+getElementById
+getElementsByTagName
+getElementsByClassName
+
+add
+delete 
+
+addRow 
+------------------------------------
+
+BOM -> browser object model -> browser 
+
+window -> 
+    JS -> function variable ---> window 
+
+    window.document.getElementById("signup")
+    document.getElementById("")
+
+    1)screen
+    2)location 
+    3)document
+    4)histroy 
+    5)navigator 
+
+---------------------------------------------------
+storage 
+    cookie 
+    localstorage  
+    session 
+
+
+
 
 
 
