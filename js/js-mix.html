@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        // "use strict";
+
+        let d = new Date(); // Date class -> browser date time - timezone -->system 
+        console.log(d);
+
+        console.log(d.getFullYear());
+        console.log(d.getDate());
+        console.log(d.getMonth());
+        //
+
+
+
+        let d1 = new Date(1988, 11, 31, 3, 0, 0) //java -> month -> js-> 0 
+        console.log(d1);
+        let d2 = new Date(1988, 11, 31)
+        console.log(d2);
+        let d3 = new Date(2001)
+        console.log(d3);
+        let d4 = new Date("1988")
+        console.log(d4);
+        //-------------------------------------------------------------
+
+
+        function add() {
+            console.log("add()");
+        }
+
+        sub = function () {
+            console.log("sub()");
+        }
+
+        function sqr(num) {
+            console.log(num * num);
+        }
+
+        sqr2 = (num) => {  console.log(num * num); } 
+        sqr3 = num => console.log(num * num);
+
+        add();
+        sub();
+        sqr(3);
+        sqr2(3);
+        sqr3(3);
+    //-------------------------------------------------------------
+        //do we have set in js? 
+        //array ? -> collection of multiple data items  , it can be duplicate , ordered can be access using index 
+        
+        //Set 
+        //collection of multiple data items , it can not allow duplicate items , no ordered 
+
+        let numbers = new Set(); 
+
+        numbers.add(12);
+        numbers.add(13);
+    
+        numbers.add(120);
+        numbers.add(130);
+   
+        numbers.add(12);
+        numbers.add(13);
+    
+        console.log(numbers);
+        
+        //for(val:numbers){
+             //log(val)
+        //}
+        numbers.forEach(function(val){
+             console.log(val); 
+        })
+//-------------------------------------------------------------
+// hoisting ???--> java script's  declarations are hoisted 
+                  // moving all declaration code on top 
+
+// hosting -- web -- deploy --live --  www 
+
+
+//
+
+v = 90 ; //init 
+console.log(v);  // access / use  
+var v ; //declaration
+
+
+
+// g = 900;
+// console.log(g);
+// let g;//const
+
+
+
+var pop = 89
+console.log(pop);
+
+
+console.log(pop2);
+var pop2=999;// 
+
+
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
