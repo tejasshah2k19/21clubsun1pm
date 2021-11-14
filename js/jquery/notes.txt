@@ -1,0 +1,54 @@
+jquery ->   
+    javascript library 
+    write less , do more 
+
+    it makes js code easier and optimized 
+
+    we have ready made almost all common task [ validation , date , text , image , callback ] 
+    manipulate dom -> ready function and selectors for that 
+
+    major feature that we have in jquery:-
+    1) DOM manipulation
+    2) design/css manipulation
+    3) AJAX
+    4) event handeling - animation   
+
+-----------------------------------------------------------------
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+$ => 
+
+
+
+selectors :- 
+
+$(document).ready(); 
+$(document).ready();
+$("p").hide();
+$(".btn-success").XXX()
+$("#mydata).xxx()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

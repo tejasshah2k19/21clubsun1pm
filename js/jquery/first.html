@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+    No.1 <input type="text" id="n1" /><br>
+    No.2 <input type="text" id="n2" /><br>
+    <input type="button" value="add" id="btnAdd" />
+    <br>
+    <p id="ans"></p>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        //alert("my page is ready");
+        //id-selector  
+        $("#btnAdd").click(function () {
+            //alert("click")  
+            let n1 = $("#n1").val()
+            let n2 = $("#n2").val()
+            let ans = parseInt(n1) + parseInt(n2)
+            $("#ans").html(ans)
+            //document.getElelemtById("ans").innerHTML = ans 
+
+        })
+
+    })
+
+
+</script>
+
+</html>
