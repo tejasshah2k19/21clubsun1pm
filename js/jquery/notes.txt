@@ -25,6 +25,9 @@ selectors :-
 
 $(document).ready(); 
 $(document).ready();
+
+
+document.getElementByTagName("p") ==> $("p")
 $("p").hide();
 $(".btn-success").XXX()
 $("#mydata).xxx()
