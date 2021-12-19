@@ -23,8 +23,6 @@
                         <label for="exampleInputEmail1">FirstName</label>
                         <input type="email" class="form-control" id="firstName" placeholder="Enter firstname">
                     </div>
-
-
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="email" placeholder="Enter email">
@@ -33,8 +31,7 @@
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
-
-                    <button type="button" id="btnSignup" class="btn btn-primary">Submit</button>
+                    <button type="button" id="btnSignup"  class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -51,7 +48,7 @@
         })
 
         function saveUser() {
-            let subUrl = "saveuser1";
+            let subUrl = "saveuser2";
 
             let firstName = $("#firstName").val();
             let email = $("#email").val();
@@ -60,17 +57,18 @@
             //call ? 
             //jquery -> function 
             let data = {"firstName":firstName,"email":email,"password":password}
+            
             $.ajax({
                 type: "POST",
                 url: url+subUrl,
                 data: data,
-                success: function(r){
-                    console.log(r);
-                },error:function(e){
-                    console.log(e);
-                    if(e.status == 403){
-                        alert("please login before checout");
-                    }
+                success:function(successResp){
+                    console.log(successResp);
+                    alert("Signup successfully done....");
+                },
+                error:function(errResp){
+                    console.log(errResp);
+                    alert("SomethingWentWrong.....");
                 }
 
             });
