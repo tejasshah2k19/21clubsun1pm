@@ -11,6 +11,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="api-service.js"></script>
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <div id="signup">
             <div class="col-md-4">
                 <form>
-                     
+
                     <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="email" placeholder="Enter email">
@@ -28,7 +30,7 @@
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
-                    <button type="button" id="btnSignup"  class="btn btn-primary">Submit</button>
+                    <button type="button" id="btnSignup" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -37,8 +39,7 @@
     </div>
 
     <script>
-        let url = "http://healthy-me-rest-api.herokuapp.com/";
-
+        
         $(document).ready(function () {
 
             $("#btnSignup").click(authenticate);
@@ -46,27 +47,30 @@
 
         function authenticate() {
             let subUrl = "authenticate2";
- 
+
             let email = $("#email").val();
             let password = $("#password").val();
 
             //call ? 
             //jquery -> function 
-            let data = {"email":email,"password":password}
-            
+            let data = { "email": email, "password": password }
+
             $.ajax({
                 type: "POST",
-                url: url+subUrl,
+                url: url + subUrl,
                 data: data,
-                success:function(successResp){
-                        if(successResp.status == -1){
-                            alert("Invalid credentials....")
-                        }else{
-                            window.location="Home.html"
-                        }
-               
+                success: function (successResp) {
+                    if (successResp.status == -1) {
+                        alert("Invalid credentials....")
+                    } else {
+
+                        // console.log(successResp);
+                        localStorage.setItem("authToken", successResp.data.authToken)
+                        window.location = "Home.html"
+                    }
+
                 },
-                error:function(errResp){
+                error: function (errResp) {
                     console.log(errResp);
                     alert("SomethingWentWrong.....");
                 }

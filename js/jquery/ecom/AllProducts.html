@@ -11,9 +11,14 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-</head>
+    <script src="api-service.js"></script>
+    </head>
 
 <body>
+
+     
+    <div id="header"></div>
+
     <div class="container">
         <h2>All Products</h2>
 
@@ -25,11 +30,12 @@
 
 
     <script>
-        let url = "http://healthy-me-rest-api.herokuapp.com/";
         var products = [] 
         $(document).ready(function () {
 
             printAllProducts();
+
+          
         })
 
         function printAllProducts() {
@@ -53,7 +59,7 @@
                     let mainProductsDiv = $("#products");   
 
                     for(let i=0;i<products.length;i++){ 
-                        mainProductsDiv.append(products[i].name+"  :   " + products[i].price +"<br>") 
+                        mainProductsDiv.append(products[i].name+"  :   " + products[i].price + "<button id='addtocart' onclick='addtocart("+products[i].productId+")'>Addtocart</button>" + "<br><br>") 
                     }
 
                 },
@@ -64,6 +70,14 @@
 
             });
         }
+        function addtocart(productId){
+            alert("item added..."+productId);
+            let authToken = localStorage.getItem("authToken")
+
+            //api call --> 
+             addToCart(authToken,productId);
+        }
+        //signup login --> 
     </script>
 
 

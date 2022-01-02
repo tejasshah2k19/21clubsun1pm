@@ -11,11 +11,13 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="api-service.js"></script>
+
 </head>
 
 <body>
     <div class="container">
-      
+
         <div id="signup">
             <div class="col-md-4">
                 <form>
@@ -31,7 +33,7 @@
                         <label for="exampleInputPassword1">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Password">
                     </div>
-                    <button type="button" id="btnSignup"  class="btn btn-primary">Submit</button>
+                    <button type="button" id="btnSignup" class="btn btn-primary">Submit</button>
                 </form>
                 <a href="login.html">Login</a>
 
@@ -42,7 +44,7 @@
     </div>
 
     <script>
-        let url = "http://healthy-me-rest-api.herokuapp.com/";
+        
 
         $(document).ready(function () {
 
@@ -58,17 +60,17 @@
 
             //call ? 
             //jquery -> function 
-            let data = {"firstName":firstName,"email":email,"password":password}
-            
+            let data = { "firstName": firstName, "email": email, "password": password }
+
             $.ajax({
                 type: "POST",
-                url: url+subUrl,
+                url: url + subUrl,
                 data: data,
-                success:function(successResp){
+                success: function (successResp) {
                     console.log(successResp);
                     alert("Signup successfully done....");
                 },
-                error:function(errResp){
+                error: function (errResp) {
                     console.log(errResp);
                     alert("SomethingWentWrong.....");
                 }
